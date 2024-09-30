@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBOCON</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.6.4.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/robocon.js"></script>
+    <style>
+        .red{
+            font-size: 15px;
+            color: red;
+        } 
+        [class*="col-"]{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        li{
+            width: 120px;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border" style="margin-top: 20px;">
+        <div class="row">
+            <div class="col-md-12" style="margin-top: 10px;">
+                <img src="../IMG/Screenshot 2023-05-16 195654.png" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="navbar navbar-nav navbar-expand-md">
+                    <li class="nav-item"><a href="#" class="nav-link">Đăng nhập</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnDK">Đăng ký</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <h1>DANH SÁCH THAM GIA ĐỘI ROBOCON KHOA CNTT</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table-bordered table-light table-primary table-hover table table-striped">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã thành viên</th>
+                        <th>Họ tên</th>
+                        <th>Lớp</th>
+                        <th>Ngày tham gia</th>
+                        <th>Điện thoại</th>
+                        <th>Email</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row border" >
+            <div class="col-md-4">
+                <p>SVTH: </p>
+            </div>
+            <div class="col-md-4">
+                <p>Mã số sinh viên: 21039851</p>
+            </div>
+            <div class="col-md-4">
+                <p>Lớp: DHCNTT17ATT</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2>THÔNG TIN CÁ NHÂN</h2>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Mã thành viên:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="Mã: K16-123456789" id="txtMa">
+                                        <span id="tbMa" style="color: red;">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Họ tên:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="Họ tên: Tran Anh Dung" id="txtHT">
+                                        <span id="tbHT" style="color: red;">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Lớp:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="Lớp: DHKTPM16ATT" id="txtLop">
+                                        <span id="tbLop" style="color: red;">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Ngày tham gia:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="mm / dd / yyyy" id="txtNgay">
+                                        <span id="tbNgay" style="color: red;">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Số điện thoại:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="text" class="form-control" placeholder="SDT: 0xxx-xxx-xxx" id="txtSDT">
+                                        <span id="tbSDT" style="color: red;">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <label for="">Email:</label>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <input type="email" class="form-control" placeholder="Email: xxxxxx@iuh.edu.vn" id="txtEmail">
+                                        <span id="tbEmail" style="color: red;">*</span>
+                                    </div>
+                                </div>
+                                <div class="row border">
+                                    <div class="col-md-12" style="padding: 10px;">
+                                        <input type="button" class="btn btn-success btn-block" value="Lưu" id="btnLuu">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

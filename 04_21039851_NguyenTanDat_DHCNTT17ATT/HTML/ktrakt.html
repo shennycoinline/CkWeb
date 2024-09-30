@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kết thúc môn</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.6.4.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/ktrakt.js"></script>
+    <style>
+        .red{
+            font-size: 100%;
+            color: red;
+        }
+        [class*="col-"]{
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        li{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-md-12" align="center">
+                <h2>ĐIỆN LỰC GÒ VẤP</h2>
+                <h5>THANH TOÁN TIỀN ĐIỆN</h5>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <ul class="navbar navbar-nav navbar-expand-md border">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Dịch vụ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnTT">Thanh toán trực tiếp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table-bordered table-light table-primary table-hover table table-striped">
+                    <tr>
+                        <th>STT</th>
+                        <th>Khách Hàng</th>
+                        <th>Mã Khách Hàng</th>
+                        <th>Họ tên/ Doanh nghiệp</th>
+                        <th>Tháng thanh toán</th>
+                        <th>Chỉ số chi tiêu</th>
+                        <th>Khuyến mãi</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>THÔNG TIN KHÁCH HÀNG</h3>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for=""  id="txtkh">Khách hàng</label> <br>
+                                        <input type="radio" name="khach"> Doanh nghiệp
+                                        <input type="radio" name="khach"> Hộ gia đình
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <span id="tbKH">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Mã Khách Hàng</label>
+                                    </div>
+                                    <br>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" placeholder="PE1600001234DN" id="txtMakh">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <span id="tbMakh">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Họ tên khách hàng</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="txthoten">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <span id="tbhoten">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Tháng thanh toán</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <select name="thang" id="txtthang" style="width: 480px;" class="form-control">
+                                            <option value="121">1</option>
+                                            <option value="130">2</option>
+                                            <option value="189">3</option>
+                                            <option value="154">4</option>
+                                            <option value="">5</option>
+                                            <option value="">6</option>
+                                            <option value="">7</option>
+                                            <option value="">8</option>
+                                            <option value="">9</option>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                            <option value="">12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6 col-sm-12">
+                                        <span id="tbthang">*</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Chỉ số tiêu thụ</label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" id="txtchiso" disabled>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <label for="">Khuyến mãi</label><br>
+                                        <input type="checkbox" name="km" id="txtkm"> Giảm giá 10%
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12"><input type="button" class="btn btn-success" id="btnThanh" value="Thanh toán"></div>
+                                </div>
+                                <div class="row border" style="padding: 10px;">
+                                    <div class="col-md-12" style="color: red; margin-left: 140px;">
+                                        <p><b>21039851_Nguyễn Tấn Đạt_DHCNTT17ATT</b></p>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

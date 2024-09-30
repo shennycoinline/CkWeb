@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tư Vấn Online</title>
+    <link rel="stylesheet" href="../CSS/bootstrap.min.css">
+    <script src="../JS/jquery-3.6.4.min.js"></script>
+    <script src="../JS/bootstrap.min.js"></script>
+    <script src="../JS/tuvan.js"></script>
+    <style>
+        .red{
+            font-size: 15px;
+            color: red;
+        }
+        [class*="col-"]{
+            padding-left: 5;
+            padding-right: 5;
+        }
+        li{
+            width: 100px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container border">
+        <div class="row">
+            <div class="col-md-12">
+                <img src="../IMG/Screenshot 2023-05-16 230849.png" alt="" width="100%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="navbar navbar-nav navbar-expand-md">
+                    <li class="nav-item"><a href="#" class="nav-link">Trang chủ</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link" id="btnDat">Đặt lịch</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table class="table-bordered table-light table-primary table-hover table table-striped">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã bệnh nhân</th>
+                        <th>Mật khẩu</th>
+                        <th>Ngày khám</th>
+                        <th>Phụ thu dịch vụ</th>
+                        <th>Chuyên khoa</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="modal fade" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3>Đặt lịch khám online</h3>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <form action="">
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for=""><b>Mã bệnh nhân</b></label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="text" class="form-control" placeholder="Ma benh nhan" id="txtMa">
+                                        <span id="tbMa" style="color: red;">(*)BN-YYYYYY</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for=""><b>Mật khẩu</b></label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="password" class="form-control" placeholder="Mat khau" id="txtMK">
+                                        <span id="tbMK" style="color: red;">(*)</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for=""><b>Ngày khám</b></label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="date" class="form-control" id="txtNgay">
+                                        <span id="tbNgay" style="color: red;">(*)</span>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for=""><b>Loại dịch vụ</b></label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <input type="checkbox" name="DV" id="txtDV"> Khám bệnh theo yêu cầu
+                                        <input type="checkbox" name="DV" id="txtDV"> Điều trị ngoại trú
+                                        <input type="checkbox" name="DV" id="txtDV"> Bác sĩ theo yêu cầu
+                                    </div>
+                                    <!-- <p id="total-price">Giá trị phụ thu: </p> -->
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <label for=""><b>Chuyên khoa</b></label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <select name="chuyenkhoa" id="txtCK" class="form-control">
+                                            <option value="">Ngoại tổng quát</option>
+                                            <option value="">Nhi</option>
+                                            <option value="">Nội tổng quát</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row form-group">
+                                    <div class="col-md-12">
+                                        <input type="button" value="Đặt lịch" class="btn btn-default" style="background-color: deepskyblue; color: white;" id="btnDatlich">
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <input type="button" value="Close" class="btn btn-default" style="background-color: deepskyblue; color: white;">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

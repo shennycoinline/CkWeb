@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+    margin: auto;
+}
+.wrapper{
+    width: 1100px;
+    height: 400px;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+section {
+    width: 1100px;
+    border-top: 1px solid black;
+}
+section ul {
+    width: 400px;
+    list-style: none;
+    display: inline-flex;
+}
+footer{
+    width: 1100px;
+    border-top: 1px solid black;
+}
